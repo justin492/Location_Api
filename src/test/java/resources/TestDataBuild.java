@@ -10,15 +10,15 @@ public class TestDataBuild {
 
 	
 	
-	public AddPlace addPlacePayLoad()
+	public AddPlace addPlacePayLoad(String name,String language, String Address)
 	{
 		AddPlace p =new AddPlace();
 		p.setAccuracy(50);
-		p.setAddress("ummachikulam");
-		p.setLanguage("Tamil");
+		p.setAddress(Address);
+		p.setLanguage(language);
 		p.setPhone_number("(+91) 983 893 3937");
 		p.setWebsite("https://rahulshettyacademy.com");
-		p.setName("justin house");
+		p.setName(name);
 		List<String> myList =new ArrayList<String>();
 		myList.add("shoe park");
 		myList.add("shop");

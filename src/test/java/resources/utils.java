@@ -15,15 +15,20 @@ import io.restassured.specification.RequestSpecification;
 
 public class utils {
 	
-	RequestSpecification baseurlreq;
+	public static RequestSpecification baseurlreq;
 	public RequestSpecification requestSpecification() throws IOException
 	{
+		if(baseurlreq==null)
+		{
 		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
 		baseurlreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseURL")).addQueryParam("key", "qaclick123")
 				.addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log))
 				.setContentType(ContentType.JSON).build();
 		return baseurlreq;
+		}
+		return baseurlreq;
+		
 	}
 	
 	public static String getGlobalValue(String key) throws IOException

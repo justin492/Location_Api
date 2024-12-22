@@ -23,11 +23,12 @@ public class Location_Api extends utils {
 	ResponseSpecification res;
 	Response response;
 	TestDataBuild data;
-	@Given("Add place Payload")
-	public void add_place_payload() throws IOException {
+	@Given("Add place Payload with {string} {string} {string}")
+	public void add_place_payload_with(String name, String language, String Address) throws IOException {
 		data=new TestDataBuild();
 		
-		req=given().spec(requestSpecification()).body(data.addPlacePayLoad());	
+		req=given().spec(requestSpecification()).
+				body(data.addPlacePayLoad(name, language, Address));	
 		
 	}
 
