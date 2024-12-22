@@ -14,6 +14,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import resources.APIResources;
 import resources.TestDataBuild;
 import resources.utils;
 
@@ -32,12 +33,18 @@ public class Location_Api extends utils {
 		
 	}
 
-	@When("The user calls {string} with Post http request")
-	public void the_user_calls_with_post_http_request(String string) {
+	@When("The user calls {string} with {string} http request")
+	public void the_user_calls_with_http_request(String resource, String method) {
 		
+		APIResources resourceapi=APIResources.valueOf(resource);
 		res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		 response=req.when().post("maps/api/place/add/json").then().
-				spec(res).extract().response();
+		if(method.equalsIgnoreCase("Post")) 
+		{
+		response=req.when().post(resourceapi.getresource());
+		}
+		else if(method.equalsIgnoreCase("Get")){
+			response=req.when().get(resourceapi.getresource());
+		}
 		 
 	}
 
