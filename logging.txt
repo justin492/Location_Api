@@ -27,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Sun, 22 Dec 2024 17:09:19 GMT
+Date: Mon, 23 Dec 2024 02:14:35 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,10 +40,48 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "18b065bf651ecb609ff1ed30108f40d2",
+    "place_id": "7ea9dabfb97f3aaaa439116786c2f969",
     "scope": "APP",
-    "reference": "8142bd58445a779fc7a3cb5b46583a628142bd58445a779fc7a3cb5b46583a62",
-    "id": "8142bd58445a779fc7a3cb5b46583a62"
+    "reference": "336a19c62220c225070472b9a82ecbe4336a19c62220c225070472b9a82ecbe4",
+    "id": "336a19c62220c225070472b9a82ecbe4"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=7ea9dabfb97f3aaaa439116786c2f969
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=7ea9dabfb97f3aaaa439116786c2f969
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 23 Dec 2024 02:14:37 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 258
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "justin house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "paachalur-kodaikanal",
+    "types": "shoe park,shop",
+    "website": "https://rahulshettyacademy.com",
+    "language": "Tamil"
 }
 Request method:	POST
 Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
@@ -74,7 +112,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Sun, 22 Dec 2024 17:09:21 GMT
+Date: Mon, 23 Dec 2024 02:14:40 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -87,8 +125,46 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "73e380499148c31ffdbdc3ebe9f394c2",
+    "place_id": "9458317a562e9f8d44d7ab5c98a24b47",
     "scope": "APP",
-    "reference": "5da052f9e8389f114b45c8425d69094a5da052f9e8389f114b45c8425d69094a",
-    "id": "5da052f9e8389f114b45c8425d69094a"
+    "reference": "2219f7238d7c51da2f15c343281bc1702219f7238d7c51da2f15c343281bc170",
+    "id": "2219f7238d7c51da2f15c343281bc170"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=9458317a562e9f8d44d7ab5c98a24b47
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=9458317a562e9f8d44d7ab5c98a24b47
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 23 Dec 2024 02:14:41 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 256
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "mary house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "paachalur-kodaikanal",
+    "types": "shoe park,shop",
+    "website": "https://rahulshettyacademy.com",
+    "language": "Tamil"
 }

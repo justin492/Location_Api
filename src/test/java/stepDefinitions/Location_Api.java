@@ -55,8 +55,18 @@ public class Location_Api extends utils {
 
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String Keyvalue, String expValue) {
-	    String resp=response.asString();
-	    JsonPath js=new JsonPath(resp);
-	    assertEquals(js.get(Keyvalue).toString(),expValue );
+	    
+	    assertEquals(getjsonpath(response, Keyvalue),expValue );
 	}
-}
+	
+	@Then("verify the place_Id created maps to {string} using {string}")
+	public void verify_the_place_id_created_maps_to_using(String expname, String resource) throws IOException {
+	String place_id	=getjsonpath(response, "place_id");
+	req=given().spec(requestSpecification()).queryParam("place_id", place_id);
+	the_user_calls_with_http_request("getPlaceAPI", "GET");
+	String actualname =getjsonpath(response, "name");
+	assertEquals(actualname, expname);
+	
+	 }
+	}
+
